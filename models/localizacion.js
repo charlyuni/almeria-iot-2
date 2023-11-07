@@ -6,7 +6,7 @@ const localizacionSchema = new Schema({
         type: Number,
         required: true,
     },
-    latitud: {
+    longitud: {
         type: longitud,
         required: true,
     },
