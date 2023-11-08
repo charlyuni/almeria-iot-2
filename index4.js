@@ -33,9 +33,9 @@ client.on('connect', () => {
             console.log('ok conec')
         } else console.log(err)
     })
-    client.publish('salida', "recibimos2", error => {
+/*     client.publish('salida', "recibimos2", error => {
         console.log(error || 'ensaje enviado')
-    })
+    }) */
 })
 
 
