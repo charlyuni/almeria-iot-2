@@ -5,6 +5,7 @@ const cors = require("cors");
 const { setTemp } = require('./db/api/temp.db');
 const { setLat, setLong } = require('./db/api/latLong.db');
 const { setPower } = require('./db/api/power.db');
+const { setDevices } = require('./db/api/devices.db');
 
 
 var app = express();
@@ -52,7 +53,8 @@ client.on('message', (topic, message) => {
         setLong(message.toString())
     else if (setTopic === 'power')
         setPower(message.toString())
-
+        else if (setTopic === 'devices')
+        setDevices(message.toString())
 
     // message is Buffer
     console.log('dato', topic, message.toString())
